@@ -6,13 +6,13 @@
 /*   By: cnamoune <cnamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 20:10:38 by cnamoune          #+#    #+#             */
-/*   Updated: 2025/02/06 02:40:18 by cnamoune         ###   ########.fr       */
+/*   Updated: 2025/02/03 18:58:41 by cnamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	align_both_mzero(t_list **stack_a, t_list **stack_b, t)
+void	align_both_mzero(t_list **stack_a, t_list **stack_b)
 {
 	t_list	*node;
 	t_list	*target;

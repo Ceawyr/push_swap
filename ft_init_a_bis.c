@@ -6,7 +6,7 @@
 /*   By: cnamoune <cnamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 23:09:28 by cnamoune          #+#    #+#             */
-/*   Updated: 2025/01/15 23:47:08 by cnamoune         ###   ########.fr       */
+/*   Updated: 2025/02/09 19:28:34 by cnamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,10 @@ static int	scan_input(char **argv)
 			while (j < i)
 			{
 				if (current == ft_atoi(argv[j]))
+				{
+					free_tab(argv);
 					ft_exit_error(0);
+				}
 				j++;
 			}
 			i++;
