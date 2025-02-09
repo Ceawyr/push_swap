@@ -6,7 +6,7 @@
 /*   By: cnamoune <cnamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 23:16:17 by cnamoune          #+#    #+#             */
-/*   Updated: 2025/02/01 02:07:29 by cnamoune         ###   ########.fr       */
+/*   Updated: 2025/02/03 18:57:53 by cnamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ void	fil_rotation_data(t_list **stack_a)
 			cost.total = median_bot_pos(node, node->target);
 		else if (node->median == 0 && node->target && node->target->median == 1)
 			cost.total = median_diff_pos(node, node->target, 0);
-		else if (node->median == 1 && node->target &&node->target->median == 0)
+		else if (node->median == 1 && node->target && node->target->median == 0)
 			cost.total = median_diff_pos(node, node->target, 1);
 		node->push_cost = cost.total;
 		node = node->next;

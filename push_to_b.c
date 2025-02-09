@@ -6,38 +6,13 @@
 /*   By: cnamoune <cnamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 20:10:38 by cnamoune          #+#    #+#             */
-/*   Updated: 2025/02/02 23:28:14 by cnamoune         ###   ########.fr       */
+/*   Updated: 2025/02/06 02:40:18 by cnamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_list	*get_cheap_push(t_list **stack)
-{
-	t_list	*node;
-	t_list	*best_to_move;
-	int		mini;
-
-	if (!stack || !*stack)
-		return (NULL);
-	node = *stack;
-	mini = node->push_cost;
-	best_to_move = node;
-	while (node)
-	{
-		if (node->push_cost == 0)
-			return (node);
-		if (node->push_cost < mini)
-		{
-			mini = node->push_cost;
-			best_to_move = node;
-		}
-		node = node->next;
-	}
-	return (best_to_move);
-}
-
-void	align_both_mzero(t_list **stack_a, t_list **stack_b)
+void	align_both_mzero(t_list **stack_a, t_list **stack_b, t)
 {
 	t_list	*node;
 	t_list	*target;

@@ -6,7 +6,7 @@
 /*   By: cnamoune <cnamoune@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 21:08:37 by cnamoune          #+#    #+#             */
-/*   Updated: 2025/02/02 23:16:48 by cnamoune         ###   ########.fr       */
+/*   Updated: 2025/02/06 02:46:36 by cnamoune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 static void	final_rotate(t_list **stack_a)
 {
+	t_list	*smallest;
 
-	t_list	*smallest;	
 	smallest = get_min(stack_a);
-	if (smallest == NULL)
+	if (!smallest)
 		return ;
 	set_median(stack_a);
-	while (*stack_a != smallest)
+	while (smallest != *stack_a)
 	{
 		if (smallest->median == 0)
 			ra(stack_a);
